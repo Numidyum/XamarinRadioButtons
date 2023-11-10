@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ödev2.RadioButtonControlTemplatePage"
+             Title="RadioButton ControlTemplate demo" BackgroundColor="#337782">
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate">
+            <Frame BorderColor="Black"
+                   BackgroundColor="#F3F2F1"
+                   HasShadow="True"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   Padding="0">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter Property="BorderColor"
+                                            Value="#FF3300" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="#F3F2F1" />
+                                    <Setter Property="BorderColor"
+                                            Value="#F3F2F1" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Grid Margin="4"
+                      WidthRequest="100">
+                    <Grid WidthRequest="18"
+                          HeightRequest="18"
+                          HorizontalOptions="End"
+                          VerticalOptions="Start">
+                        <Ellipse Stroke="Blue"
+                                 Fill="White"
+                                 WidthRequest="16"
+                                 HeightRequest="16"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                        <Ellipse x:Name="check"
+                                 Fill="Blue"
+                                 WidthRequest="8"
+                                 HeightRequest="8"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                    </Grid>
+                    <ContentPresenter />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="10">
+        <Label Text="Hangisi en sevdiğin hayvandır?" Margin="0,5,0,0" TextColor="Black" FontSize="30" FontFamily="BlackOps"/>
+        <StackLayout RadioButtonGroup.GroupName="animals"
+                     Orientation="Horizontal">
+            <RadioButton Value="Kedi"
+                         CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="cat.png"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" />
+                        <Label Text="Kedi"
+                               HorizontalOptions="Center"
+                               VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Köpek"
+                         CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="dog.png"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" />
+                        <Label Text="Köpek"
+                               HorizontalOptions="Center"
+                               VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Fil"
+                         CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="elephant.png"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" />
+                        <Label Text="Fil"
+                               HorizontalOptions="Center"
+                               VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Maymun"
+                         CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="monkey.png"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" />
+                        <Label Text="Maymun"
+                               HorizontalOptions="Center"
+                               VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+        </StackLayout>
+        <Label x:Name="animalLabel"
+               Text="Seçimin:" TextColor="Black" FontSize="15" FontFamily="BlackOps"/>
+    </StackLayout>
+</ContentPage>

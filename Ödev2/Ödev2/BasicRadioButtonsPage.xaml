@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ödev2.BasicRadioButtonsPage"
+             Title="Basic RadioButtons demo" >
+    
+    <StackLayout Margin="0" BackgroundColor="#337782">
+
+        <Label Text="En sevdiğin hayvan nedir?" FontSize="30" HorizontalTextAlignment="Center" TextColor="#FFFFFF" FontFamily="BlackOps" />
+        
+        <RadioButton Content="Kedi"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Köpek"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Fil"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Maymun"
+                     IsChecked="True"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        
+        <Label x:Name="animalLabel"
+               Text="Seçimin:" TextColor="White" FontFamily="BlackOps" FontSize="20"/>
+
+        <Label Text="En sevdiğin hayvan nedir?" FontSize="30" HorizontalTextAlignment="Center" TextColor="#FFFFFF" FontFamily="BlackOps"/>
+        <StackLayout>
+            <RadioButton Value="Kedi"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="cat.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Köpek"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="dog.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Fil"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="Fil.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Maymun"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="Maymun.png" />
+                </RadioButton.Content>
+            </RadioButton>
+        </StackLayout>
+        <Label x:Name="animalImageLabel"
+               Text="Seçimin:" TextColor="White" FontFamily="BlackOps"/>
+    </StackLayout>
+</ContentPage>

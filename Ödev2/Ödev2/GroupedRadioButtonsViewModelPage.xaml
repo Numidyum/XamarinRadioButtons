@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ödev2.GroupedRadioButtonsViewModelPage"
+             Title="Grouped RadioButtons ViewModel demo" BackgroundColor="#337782">
+    
+    <StackLayout Margin="10"
+                 RadioButtonGroup.GroupName="{Binding GroupName}"
+                 RadioButtonGroup.SelectedValue="{Binding Selection}">
+        <Label Text="En sevdiğin hayvan nedir?" FontFamily="BlackOps" FontSize="30" HorizontalTextAlignment="Center" TextColor="black"/>
+        <RadioButton Content="Kedi"
+                     Value="Kedi"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Köpek"
+                     Value="Köpek"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Fil"
+                     Value="Fil"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Maymun"
+                     Value="Maymun"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <Label x:Name="animalLabel">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Seçimin:" TextColor="Black" FontSize="20" FontFamily="BlackOps"/>
+                    <Span Text="{Binding Selection}" TextColor="Black" FontSize="20" FontFamily="BlackOps"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

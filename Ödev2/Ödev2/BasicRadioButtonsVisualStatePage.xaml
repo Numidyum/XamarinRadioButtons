@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ödev2.BasicRadioButtonsVisualStatePage"
+             Title="RadioButton VisualState demo" BackgroundColor="#337782">
+    <ContentPage.Resources >
+        <Style TargetType="RadioButton">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CheckedStates">
+                        <VisualState x:Name="Checked">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor"
+                                        Value="Black" />
+                                <Setter Property="Opacity"
+                                        Value="1" />
+                                <Setter Property="FontFamily"
+                                         Value="BlackOps" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Unchecked">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor"
+                                        Value="Black"/>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                                <Setter Property="FontFamily"
+                                         Value="BlackOps" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout Margin="10">
+        <Label Text="Hangisi en sevdiğin ulaşım yoludur?" FontFamily="BlackOps" FontSize="50" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <RadioButton Content="Araba"
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Bisiklet"
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Tren"
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <RadioButton Content="Yürümek"
+                     CheckedChanged="OnRadioButtonCheckedChanged" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        <Label x:Name="resultLabel"
+               Text="Seçtiğin:" FontSize="20" TextColor="Black" FontFamily="BlackOps"/>
+    </StackLayout>
+</ContentPage>

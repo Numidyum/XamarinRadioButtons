@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ödev2.GroupedRadioButtonsPage"
+             Title="Grouped RadioButtons demo" BackgroundColor="#337782">
+    <StackLayout Margin="10">
+        <Label Text="En sevdiğin renk hangisi?" FontSize="25" FontFamily="BlackOps" TextColor="black" Margin="0,50,0,0" />
+        <RadioButton Content="Kırmızı"
+                     GroupName="colors"
+                     TextColor="Red"
+                     FontFamily="BlackOps"
+                     FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"
+  
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <RadioButton Content="Yeşil"
+                     GroupName="colors"
+                     TextColor="Green"
+                     FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <RadioButton Content="Mavi"
+                     GroupName="colors"
+                     TextColor="Blue"
+                     FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <RadioButton Content="Diğer"
+                     GroupName="colors"
+                     FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <Label x:Name="colorLabel"
+               Text="Seçtiğin:" FontSize="15" FontFamily="BlackOps" TextColor="black"/>
+
+
+
+        <Label Text="En sevdiğin meyve hangisi?" FontSize="25" FontFamily="BlackOps" TextColor="black" Margin="0,25,0,0"/>
+        <StackLayout RadioButtonGroup.GroupName="fruits">
+            
+            <RadioButton Content="Elma"
+                         CheckedChanged="OnFruitsRadioButtonCheckedChanged"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+            <RadioButton Content="Muz"
+                         CheckedChanged="OnFruitsRadioButtonCheckedChanged"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+            <RadioButton Content="Ananas"
+                         CheckedChanged="OnFruitsRadioButtonCheckedChanged"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+            <RadioButton Content="Diğer"
+                         CheckedChanged="OnFruitsRadioButtonCheckedChanged"                      FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+        </StackLayout>
+        <Label x:Name="fruitLabel"
+               Text="Seçtiğin:" FontSize="15" FontFamily="BlackOps" TextColor="black"/>
+    </StackLayout>
+</ContentPage>
+

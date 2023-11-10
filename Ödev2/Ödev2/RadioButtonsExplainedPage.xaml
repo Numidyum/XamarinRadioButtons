@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ödev2.RadioButtonsExplainedPage"
+             Title="RadioButton Content demos" BackgroundColor="#337782">
+    <StackLayout Margin="10">
+        <Label Text="RadioButton.Content bir dize olduğunda, her platformda metne çevrilecektir:" TextColor="Black" FontSize="20" FontFamily="BlackOps"/>
+        <RadioButton Content="
+Bir dize içeren RadioButton" FontFamily="BlackOps"
+FontSize="20" BackgroundColor="#FFFFFF" BorderColor="#000000" BorderWidth="2" CornerRadius="50"/>
+
+        <Label Text="RadioButton.Content bir Görünüm olduğunda yalnızca desteklenen platformlarda görüntülenecektir:" Margin="0,30,0,0" TextColor="Black" FontSize="20" FontFamily="BlackOps"/>
+        <OnPlatform x:TypeArguments="View">
+            <On Platform="iOS,UWP">
+                <RadioButton>
+                    <RadioButton.Content>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="monkey.png" />
+                            <Label Text="Monkey"
+                                    VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </RadioButton.Content>
+                </RadioButton>
+            </On>
+            <On Platform="Android">
+                <RadioButton Content="
+Android, RadioButton.Content'e bir Görünüm atayamaz." />
+            </On>
+        </OnPlatform>
+
+        <Label Text="
+RadioButton.Content bir Görünüm olduğunda, desteklenen platformlarda görüntülenecek ve aksi takdirde bir dize temsiline geri dönecektir:" Margin="0,30,0,0" TextColor="Black" FontSize="20" FontFamily="BlackOps"/>
+        <RadioButton>
+            <RadioButton.Content>
+                <Image Source="elephant.png"
+                       HorizontalOptions="Start" />
+            </RadioButton.Content>
+        </RadioButton>
+
+        <Label Text="
+ControlTemplate uygulandığında, her platformda RadioButton.Content'e bir Görünüm atanabilir:" Margin="0,30,0,0" TextColor="Black" FontSize="20" FontFamily="BlackOps"/>
+        <RadioButton ControlTemplate="{x:Static RadioButton.DefaultTemplate}">
+            <RadioButton.Content>
+                <Image Source="cat.png" />
+            </RadioButton.Content>
+        </RadioButton>
+    </StackLayout>
+</ContentPage>

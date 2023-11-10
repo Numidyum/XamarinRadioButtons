@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:Ödev2"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Ödev2.MainPage">
+
+    <StackLayout BackgroundColor="#337782" >
+        
+    <Button Text="Basit Radyo Butonu"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicRadioButtonsPage}" BackgroundColor="#1E464C" BorderColor="#000000" BorderWidth="2" Margin="0,45,0,0" CornerRadius="50" TextColor="#FFFFFF" FontFamily="BlackOps" />
+    <Button Text="Basit Radyo Butonu 2"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicRadioButtonsVisualStatePage}" BackgroundColor="#1E464C" BorderColor="#000000" BorderWidth="2" Margin="0,45,0,0" CornerRadius="50" TextColor="#FFFFFF" FontFamily="BlackOps" />
+    <Button Text="Gruplanmış Radyo Butonu"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:GroupedRadioButtonsPage}" BackgroundColor="#1E464C" BorderColor="#000000" BorderWidth="2" Margin="0,45,0,0" CornerRadius="50" TextColor="#FFFFFF" FontFamily="BlackOps" />
+    <Button Text="Gruplanmış Radyo Butonu 2"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:GroupedRadioButtonsPageCode}" BackgroundColor="#1E464C" BorderColor="#000000" BorderWidth="2" Margin="0,45,0,0" CornerRadius="50" TextColor="#FFFFFF" FontFamily="BlackOps"/>
+    <Button Text="Gruplanmış Radyo Butonu 3"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:GroupedRadioButtonsViewModelPage}" BackgroundColor="#1E464C" BorderColor="#000000" BorderWidth="2" Margin="0,45,0,0" CornerRadius="50" TextColor="#FFFFFF" FontFamily="BlackOps"/>
+    <Button Text="Radyo Buton"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RadioButtonsExplainedPage}" BackgroundColor="#1E464C" BorderColor="#000000" BorderWidth="2" Margin="0,45,0,0" CornerRadius="50" TextColor="#FFFFFF" FontFamily="BlackOps"/>
+    <Button Text="Radyo Buton Kontrol"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RadioButtonControlTemplatePage}" BackgroundColor="#1E464C" BorderColor="#000000" BorderWidth="2" Margin="0,45,0,0" CornerRadius="50" TextColor="#FFFFFF" FontFamily="BlackOps"/>
+    </StackLayout>
+</ContentPage>
